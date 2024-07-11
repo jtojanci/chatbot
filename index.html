@@ -6,6 +6,8 @@
     <title>MascotaApp</title>
     <link rel="stylesheet" href="./assets/styles/estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 
 </head>
 <body>
@@ -18,7 +20,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
@@ -30,6 +32,19 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="avatar" role="button" data-bs-toggle="dropdown"></a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#" id="bottonsalir">Salir</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <i class="bi bi-person-circle text-white fw-bold mt-5 fs-2"></i>
                   </li>
                 </ul>
               </div>
@@ -44,8 +59,37 @@
             <div class="p-4">
                 <h5>Firulais</h5>
                 <p>Bienvenido soy Firulais</p>
+                <hr>
+                <p class="text-start">hola como estás</p>
+                <p class="text-end text-primary fw-bold">melo, cucho</p>
+                <div class="textoChat">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-9"><input type="text"class="form-control my-3" id="textoChat"></div>
+                      <div class="col-3 fs-3 mt-3"><i class="bi bi-send"></i></div>
+                    </div>
+                  </div>
+                  
+                </div>
+
+                
             </div>
         </div>
+
+        <section class="conainer-fluid">
+          <div class="row">
+            <div class="col-12 my-5">
+              <img src="./assets/img/Sura.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <h3>TITULO</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat consequatur illo sit officia excepturi voluptatibus harum possimus obcaecati repudiandae! Aliquid eius at beatae aliquam? Repellat quas quam dolorem error itaque!</p>
+            </div>
+            <div class="col-4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eveniet, eos corporis autem a culpa quidem error optio doloribus labore vel iure voluptatibus cumque necessitatibus facilis, ducimus id delectus illum!</p></div>
+          </div>
+        </section>
 
     </main>
     <footer>
@@ -55,5 +99,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./src/controllers/controlador.js"></script>
+    
 </body>
 </html>
