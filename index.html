@@ -39,7 +39,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="avatar" role="button" data-bs-toggle="dropdown"></a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="#" id="bottonsalir">Salir</a>
+                        <a class="dropdown-item" href="#" id="botonsalir">Salir</a>
                       </li>
                     </ul>
                   </li>
@@ -52,27 +52,28 @@
           </nav>
     </header>
     <main>
-        <div class="banner"></div>
+        <div class="banner">
+          <iframe width="500px" height="500px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=_tQLPBERE02ODHwzuet1gVOUQszsluJKgqtAG8K5_vdUQkFDUlBJWFNOODlQNUZQNkE3QlpNNkZVQi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+        </div>
 
         <button class="btn btn-primary botonChat" id="botonChat" onclick="cambiarCaja()">Chateemos</button>
         <div class="cajaChat" id="cajaChat">
-            <div class="p-4">
-                <h5>Firulais</h5>
-                <p>Bienvenido soy Firulais</p>
-                <hr>
-                <p class="text-start">hola como estás</p>
-                <p class="text-end text-primary fw-bold">melo, cucho</p>
-                <div class="textoChat">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-9"><input type="text"class="form-control my-3" id="textoChat"></div>
-                      <div class="col-3 fs-3 mt-3"><i class="bi bi-send"></i></div>
-                    </div>
+            <div class="p-4 mensajeChat" id="mensajeChat">
+              <p class="text-star">Hola bienvenido</p>
+              <p class="text-end">Gracias</p>
+            </div>
+            <div class="areaTextoChat">
+              <div class="container">
+                <div class="row">
+                  <div class="col-9">
+                    <input type="text" class="form-control my-3" id="textoChat">
                   </div>
-                  
-                </div>
+                  <div class="col-3 mt-3">
+                    <i class="bi bi-arrow-right-square-fill  fs-3 botonSend" id="botonSend"></i>
 
-                
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
 
@@ -93,12 +94,48 @@
 
     </main>
     <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <h3>FIRULAIS APP</h3>
+            <img src="./assets/img/robot-dog.png" class="" alt="Robot Chat">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia doloremque, voluptatibus saepe omnis consequatur cumque mollitia ex soluta autem nihil accusantium nisi, doloribus veritatis quis optio quidem odit fugit est?</p>
+          </div>
+          <div class="col-12 col-md-4">
+            <h3>SURA</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum tempore delectus labore? Officia commodi ipsam non eius accusamus inventore iusto, in architecto cupiditate aut debitis quas iure dolorem ut sunt.</p>
+            <br>
+            <br>
+            <img src="./assets/img/robot-dog.-icono.png" alt="">
+
+            <br>
+            <i class="bi bi-hospital-fill fs-1"></i>
+
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="row">
+              <h3>Acerca de nosotros</h3>
+              <br>
+              <img src="./assets/img/githubPulpo.png" alt="">
+              <br>
+              
+
+
+            </div>
+            <div class="row">Todos los derechos reservados</div>
+
+            
+          </div>
+        </div>     
+    </div>
 
     </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./src/controllers/controlador.js"></script>
-    
+    <script src="./src/controllers/controlador.js" type="module"></script>
+    <script src="./src/controllers/controladorSalida.js" type="module"></script>
+    <script src="./src/controllers/controladorChat.js" type="module"></script>
+
 </body>
 </html>
