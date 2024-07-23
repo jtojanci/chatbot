@@ -1,7 +1,40 @@
-let botonSend=document.getElementById("botonSend")
-let botonChat=document.getElementById("textoChat")
-let mensajeChat=document.getElementById("mensajeChat")
+let url="http://localhost:8000/firulais"
 
+let peticion={
+    method:"GET"
+}
+
+fetch(url,peticion)
+
+.then(function(Respuesta){
+
+    return Respuesta.json()
+})
+.then(function(Respuesta){
+    console.log(Respuesta)
+    
+    let botonSend=document.getElementById("botonSend")
+    let botonChat=document.getElementById("textoChat")
+    let mensajeChat=document.getElementById("mensajeChat")
+
+    //mapear el arreglo de preguntas y mapear el arreglo de respuestas
+
+let preguntas=Respuesta.map(function(pregunta){
+    return pregunta.pregunta
+
+})
+
+let respuestas=Respuesta.map(function(Respuesta){
+    return Respuesta.Respuesta
+
+})
+
+console.log(preguntas)
+console.log(respuestas)
+
+//se borra esta parte que sigue porque ya las traigo del servidor
+
+/*
 let preguntas=[
     "¿Cuál es tu nombre?",
     "¿Cuántos años tienes",
@@ -17,6 +50,8 @@ let respuestas=[
     "Si, un hamster",
     "Perseguir ciclistas"
 ]
+
+*/
 
 //funcion para iniciar y
 let indicePregunta=0
@@ -47,4 +82,9 @@ textoChat.addEventListener("keypress",function(evento){
         procesarEntradaChat()
     }
 
+})
+
+})
+.catch(function(Respuesta){
+    console.log(Respuesta)
 })
